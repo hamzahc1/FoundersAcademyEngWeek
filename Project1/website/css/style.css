@@ -9,3 +9,9 @@
 .navbar {
 	margin-bottom: 10px;
 }
+
+.homepage-landscape { 
+	background-image: url("../img/landscape.jpg");
+	background-size: cover;
+	min-height: 70vh;
+ }
