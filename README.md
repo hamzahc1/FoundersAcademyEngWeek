@@ -3,6 +3,8 @@ Syllabus Material for Founders Academy Engineering Week
 
 This syllabus covers 3 separate projects that represent typical jobs software engineers may have to complete.
 
+Slide deck to go alongside this located at: 
+
 
 ## Project 1 
 
