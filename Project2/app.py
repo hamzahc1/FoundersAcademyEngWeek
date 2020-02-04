@@ -1,3 +1,4 @@
+# These are libraries we need to use in our code, so we import them before we get started
 from flask import Flask, request, jsonify
 from uuid import uuid4
 import json
@@ -5,7 +6,6 @@ from datetime import datetime
 
 # Names the app as the filename
 app = Flask(__name__)
-
 
 
 # This function loads the database file into our working "memory"
@@ -66,3 +66,4 @@ def get_all_diary_entries():
 		'entries': data,
 	}
 	return jsonify(response), 200
+
