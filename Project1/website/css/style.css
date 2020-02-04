@@ -2,7 +2,7 @@
 	max-width: 80%;
 }
 
-.contactButton {
+.contact-button {
 	width: 50%;
 }
 
@@ -14,4 +14,8 @@
 	background-image: url("../img/landscape.jpg");
 	background-size: cover;
 	min-height: 70vh;
+ }
+
+ .phone-text {
+ 	font-size: large;
  }
