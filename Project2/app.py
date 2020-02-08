@@ -1,6 +1,6 @@
 # These are libraries we need to use in our code, so we import them before we get started
 from flask import Flask, request, jsonify
-# from flask_cors import CORS
+# from flask_cors import CORS, cross_origin
 
 from uuid import uuid4
 import json
