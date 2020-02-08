@@ -38,7 +38,21 @@ Provide details of entry to be created.
 ```
 
 
-
 ## Deployment
 
 We will deploy our API using pythonanywhere.com, which will allow us to easily expose our API to the public. 
+
+Steps:
+1. Sign up for an account with your email at https://www.pythonanywhere.com/registration/register/beginner/
+2. End tour 
+3. Open Web Tab 
+4. Create new Web App
+5. Click Next
+6. Click on Flask 
+7. IMPORTANT: Python 3.8 
+8. rename to app.py
+9. Should create your API. 
+10. Upload/overwrite the app.py file with our Sublime text file on our computers 
+11. Upload the database.JSON file to your file list
+12. Hit Save + Refresh
+13. 
