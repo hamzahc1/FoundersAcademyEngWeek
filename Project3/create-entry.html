@@ -17,7 +17,7 @@
     <a href="/create-entry.html">Create entry</a>
   </nav>
   <h1>Create diary entry</h1>
-  <div id="success-msg" class="hidden" style="color: teal">Entry created - <a href="/">see all entries</a></div>
+  <div id="success-msg" class="hidden" style="color: teal">Entry created - <a href="/" id="new-entry-link">view</a></div>
   <form id="diary-form" action="#">
     <label for="title">Entry title:</label>
     <input type="text" name="title">
@@ -51,6 +51,7 @@
     .then(res => {
       if (res.id) {
         document.querySelector('#success-msg').classList.remove('hidden');
+        document.querySelector('#new-entry-link').setAttribute('href', `/single-entry.html?id=${res.id}`);
       }
     })
   });

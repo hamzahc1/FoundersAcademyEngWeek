@@ -26,13 +26,13 @@
       fetch(url)
       .then(r => r.json())
       .then(data => {
-        console.log(data)
         const ids = Object.keys(data.entries)
+        const sortedEntries = ids.sort((a, b) => new Date(data.entries[a]).getTime() - new Date(data.entries[b]).getTime());
         const entriesContent = ids.map(id => `
           <div>
             <h3>${data.entries[id].title}</h3>
             <a href="/single-entry.html?id=${id}">view</a>
-            <h4>Published: ${new Date(data.entries[id].createdat).toDateString()}</h4>
+            <h4>Published: ${new Date(data.entries[id].createdat).toDateString()} - ${new Date(data.entries[id].createdat).toLocaleTimeString()}</h4>
             <p>${data.entries[id].description}</p>
             <hr />
           </div>

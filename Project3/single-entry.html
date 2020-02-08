@@ -17,23 +17,24 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const titleH1 = document.querySelector('#title');
-      const id = location.search.slice(4);
+      const content = document.querySelector('#content');
+      // this is a dirty hack 🤮
+      const id = location.search.slice('?id='.length);
       const url = `https://hamzahc.pythonanywhere.com/diaryentry/${id}`;
       fetch(url)
       .then(r => r.json())
-      .then(data => {
-        console.log(data)
-        const ids = Object.keys(data.entries)
-        const entriesContent = ids.map(id => `
+      .then(res => {
+        const entry = res.data;
+        const entryHTML = `
           <div>
-            <h3>${data.entries[id].title}</h3>
-            <a href="/single-entry.html?id=${id}">view</a>
-            <h4>Published: ${new Date(data.entries[id].createdat).toDateString()}</h4>
-            <p>${data.entries[id].description}</p>
+            <h3>${entry.title}</h3>
+            <h4>Published: ${new Date(entry.createdat).toDateString()}</h4>
+            <p>${entry.description}</p>
             <hr />
           </div>
-        `);
-        diaryEntries.innerHTML = entriesContent;
+        `;
+        titleH1.innerHTML = entry.title
+        content.innerHTML = entryHTML;
       })
     });
   </script>
