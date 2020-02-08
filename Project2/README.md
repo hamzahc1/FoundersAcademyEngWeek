@@ -55,4 +55,11 @@ Steps:
 10. Upload/overwrite the app.py file with our Sublime text file on our computers 
 11. Upload the database.JSON file to your file list
 12. Hit Save + Refresh
-13. 
+13. Test the API 
+14. Create a Bash Console (Way to interact with a computer through typing)
+15. Make venv using: mkvirtualenv venv --python=/usr/bin/python3.8
+16. Run "pip install flask-cors"
+17. Update path in the "web" part as "/home/{username}/.virtualenvs/venv" 
+18. Uncomment the lines related to CORS (3, 11, 31, 51, 67
+19. Save, Refresh and then reload web app 
+20. Test API! 
