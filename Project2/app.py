@@ -1,4 +1,4 @@
-# These are libraries we need to use in our code, so we import them before we get started
+# These are packages & modules we need to use in our code, so we import them before we get started
 from flask import Flask, request, jsonify
 # from flask_cors import CORS, cross_origin
 
@@ -6,7 +6,7 @@ from uuid import uuid4
 import json
 from datetime import datetime
 
-# Names the app as the filename
+# Create an instance of the Flask class, we use __name__ so that Flask knows where to look when we launch our application
 app = Flask(__name__)
 # CORS(app)
 
@@ -27,6 +27,7 @@ def save_db(database):
 # This creates our first API endpoint, which is a POST endpoint. A POST endpoint is used when you want to create a new entry. We are "posting" our new entry to the database to be stored. 
 
 # This line defines our API endpoint, also know as the URL we will need to call when we want to invoke this endpoint in our own application
+# This line is known as a "route decorator" - the function that follows it shows what should happen when this route is called.
 @app.route("/diaryentry", methods=["POST"])
 # @cross_origin()
 def create_diary_entry ():
