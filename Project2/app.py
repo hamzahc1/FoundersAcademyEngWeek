@@ -32,7 +32,6 @@ def save_db(database):
 def create_diary_entry ():
 	data = json.loads(request.data)
 	db = load_db()
-
 # The line below generates a random unique ID for our new entry to ensure it isn't duplicated.
 	unique_id = str(uuid4())
 	db[unique_id] = data
