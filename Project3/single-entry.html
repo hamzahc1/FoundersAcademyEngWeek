@@ -22,7 +22,7 @@
       const content = document.querySelector('#content');
       // this is a dirty hack 🤮
       const id = location.search.slice('?id='.length);
-      const url = `https://hamzahc.pythonanywhere.com/diaryentry/${id}`;
+      const url = `YOUR API URL/${id}`;
       fetch(url)
       .then(r => r.json())
       .then(res => {
