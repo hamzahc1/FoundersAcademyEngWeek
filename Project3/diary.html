@@ -15,12 +15,13 @@
   <h1>My diary</h1>
 
   <div id="diary-entries">
-    <h3>Loading entries&hellip;</h3>
+    <!-- <h3>Loading entries&hellip;</h3> -->
   </div>
 
+
+<!-- Don't worry too much about what's written in the section below this in the <script tags> for now. It represents Javascript code that calls our API and returns the diary entries to our HTML page (above!) -->
   <script>
     const url = 'https://hamzahc.pythonanywhere.com/diaryentry';
-
     document.addEventListener("DOMContentLoaded", () => {
       const diaryEntries = document.querySelector('#diary-entries');
       fetch(url)
@@ -31,7 +32,7 @@
         const entriesContent = ids.map(id => `
           <div>
             <h3>${data.entries[id].title}</h3>
-            <a href="/single-entry.html?id=${id}">view</a>
+            <a href="single-entry.html?id=${id}">view</a>
             <h4>Published: ${new Date(data.entries[id].createdat).toDateString()} - ${new Date(data.entries[id].createdat).toLocaleTimeString()}</h4>
             <p>${data.entries[id].description}</p>
             <hr />
